@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="FragmentAnimation">
+        <attr name="fragmentOpenEnterAnimation" format="reference" />
+        <attr name="fragmentOpenExitAnimation" format="reference" />
+        <attr name="fragmentCloseEnterAnimation" format="reference" />
+        <attr name="fragmentCloseExitAnimation" format="reference" />
+        <attr name="fragmentFadeEnterAnimation" format="reference" />
+        <attr name="fragmentFadeExitAnimation" format="reference" />
+    </declare-styleable>
+</resources>

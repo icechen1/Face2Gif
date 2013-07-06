@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory android:title="Transitions" >
+       
+        <ListPreference
+            android:defaultValue="Standard"
+            android:dialogTitle="Transition Mode"
+            android:entries="@array/transition_entries"
+            android:entryValues="@array/transition_entryValues"
+            android:key="transition"
+            android:summary="Standard"
+            android:title="Transition Mode" />
+
+        <ListPreference
+            android:defaultValue="4097"
+            android:dialogTitle="Standard Transition Style"
+            android:entries="@array/standard_transition_entries"
+            android:entryValues="@array/standard_transition_entryValues"
+            android:key="standard_transition"
+            android:summary="FRAGMENT_TRANSIT_OPEN"
+            android:title="Standard Transition Style" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Face2Gif</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="upload">Upload</string><string name="share">Share</string><string name="settings">Settings</string><string name="fps">FPS</string><string name="quality">Quality</string><string name="repeat">Repeat</string><string name="vignette">Vignette</string><string name="caption">Caption</string><string name="front_camera">Front Camera</string>
+
+</resources>

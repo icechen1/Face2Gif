@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	
+	<parent>
+		<groupId>com.supportanimator</groupId>
+		<artifactId>parent</artifactId>
+		<version>1.0.0</version>
+	</parent>
+
+	<artifactId>support-v4-animator</artifactId>
+	<packaging>apklib</packaging>
+	<version>r13</version>
+
+	<properties>
+		<github.global.server>github</github.global.server>
+	</properties>
+
+	<scm>
+		<url>https://github.com/kedzie/support_v4_nineoldandroids</url>
+		<connection>scm:git:git://github.com/kedzie/support_v4_nineoldandroids.git</connection>
+		<developerConnection>scm:git:git://github.com/kedzie/support_v4_nineoldandroids.git</developerConnection>
+	</scm>
+
+	<issueManagement>
+		<system>GitHub Issues</system>
+		<url>https://github.com/kedzie/support_v4_nineoldandroids/issues</url>
+	</issueManagement>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.google.android</groupId>
+			<artifactId>android</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.nineoldandroids</groupId>
+			<artifactId>library</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.actionbarsherlock</groupId>
+			<artifactId>actionbarsherlock</artifactId>
+			<type>apklib</type>
+			<exclusions>
+				<exclusion>
+					<groupId>com.google.android</groupId>
+					<artifactId>support-v4</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<sourceDirectory>${basedir}/java</sourceDirectory>
+
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>build-helper-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>add-source</goal>
+						</goals>
+						<configuration>
+							<sources>
+								<source>froyo</source>
+								<source>eclair</source>
+								<source>gingerbread</source>
+								<source>honeycomb</source>
+								<source>honeycomb_mr2</source>
+								<source>ics</source>
+								<source>ics-mr1</source>
+								<source>jellybean</source>
+								<source>jellybean-mr1</source>
+							</sources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>com.jayway.maven.plugins.android.generation2</groupId>
+				<artifactId>android-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<artifactId>maven-site-plugin</artifactId>
+				<version>3.3</version>
+				<configuration>
+					<siteDirectory>${basedir}/site</siteDirectory>
+				</configuration>
+				<dependencies>
+		            <dependency>
+		              <groupId>org.apache.maven.doxia</groupId>
+		              <artifactId>doxia-module-markdown</artifactId>
+		              <version>1.3</version>
+		            </dependency>
+              </dependencies>
+			</plugin>
+			<plugin>
+				<groupId>com.github.github</groupId>
+				<artifactId>site-maven-plugin</artifactId>
+				<version>0.9-SNAPSHOT</version>
+				<configuration>
+					<message>Creating site for ${project.version}.</message>
+					<force>true</force>
+					<merge>false</merge>
+				</configuration>
+ 				<executions>
+					<execution>
+						<id>ghsite</id>
+						<phase>site</phase>
+						<goals><goal>site</goal></goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+<reporting>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-project-info-reports-plugin</artifactId>
+				<version>2.1.1</version>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-changelog-plugin</artifactId>
+				<version>2.2</version>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>2.8.1</version>
+				<configuration>
+				    <sourcepath>${basedir}/java</sourcepath>
+					<doclet>org.jboss.apiviz.APIviz</doclet>
+					<docletArtifact>
+						<groupId>org.jboss.apiviz</groupId>
+						<artifactId>apiviz</artifactId>
+						<version>1.3.1.GA</version>
+					</docletArtifact>
+					<useStandardDocletOptions>true</useStandardDocletOptions>
+					<additionalparam>-sourceclasspath ${project.build.outputDirectory}</additionalparam>
+					<charset>UTF-8</charset>
+					<encoding>UTF-8</encoding>
+					<docencoding>UTF-8</docencoding>
+					<breakiterator>true</breakiterator>
+					<version>true</version>
+					<defaultAuthor>Marek Kędzierski</defaultAuthor>
+					<author>true</author>
+					<keywords>true</keywords>
+				</configuration>
+				<reportSets>
+          			<reportSet>
+            			<id>default</id>
+            			<reports>
+              				<report>javadoc</report>
+            			</reports>
+          			</reportSet>
+				</reportSets>
+			</plugin>
+		</plugins>
+	</reporting>
+
+</project>

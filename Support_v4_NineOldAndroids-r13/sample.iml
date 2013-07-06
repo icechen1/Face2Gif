@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="android" name="Android">
+      <configuration>
+        <option name="GEN_FOLDER_RELATIVE_PATH_APT" value="/sample/bin/generated-sources/r" />
+        <option name="GEN_FOLDER_RELATIVE_PATH_AIDL" value="/sample/bin/generated-sources/aidl" />
+        <option name="MANIFEST_FILE_RELATIVE_PATH" value="/sample/AndroidManifest.xml" />
+        <option name="RES_FOLDER_RELATIVE_PATH" value="/sample/res" />
+        <option name="ASSETS_FOLDER_RELATIVE_PATH" value="/sample/assets" />
+        <option name="LIBS_FOLDER_RELATIVE_PATH" value="/sample/libs" />
+        <option name="CUSTOM_APK_RESOURCE_FOLDER" value="/sample/bin/generated-sources/combined-resources/res" />
+        <option name="APK_PATH" value="/sample/bin/sample.apk" />
+        <option name="RUN_PROCESS_RESOURCES_MAVEN_TASK" value="false" />
+        <includeAssetsFromLibraries>true</includeAssetsFromLibraries>
+        <resOverlayFolders>
+          <path>/sample/res-overlay</path>
+        </resOverlayFolders>
+      </configuration>
+    </facet>
+  </component>
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_6" inherit-compiler-output="false">
+    <output url="file://$MODULE_DIR$/sample/bin/idea-classes" />
+    <output-test url="file://$MODULE_DIR$/sample/bin/idea-test-classes" />
+    <content url="file://$MODULE_DIR$/sample">
+      <sourceFolder url="file://$MODULE_DIR$/sample/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/sample/bin/generated-sources/r" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/sample/bin/classes" />
+      <excludeFolder url="file://$MODULE_DIR$/sample/bin/generated-sources/combined-assets" />
+      <excludeFolder url="file://$MODULE_DIR$/sample/bin/generated-sources/combined-resources" />
+      <excludeFolder url="file://$MODULE_DIR$/sample/bin/generated-sources/extracted-dependencies" />
+      <excludeFolder url="file://$MODULE_DIR$/sample/bin/idea-classes" />
+      <excludeFolder url="file://$MODULE_DIR$/sample/bin/idea-test-classes" />
+      <excludeFolder url="file://$MODULE_DIR$/sample/bin/maven-archiver" />
+      <excludeFolder url="file://$MODULE_DIR$/sample/bin/res" />
+      <excludeFolder url="file://$MODULE_DIR$/sample/bin/unpack" />
+    </content>
+    <orderEntry type="jdk" jdkName="Maven Android 4.2.2 Platform" jdkType="Android SDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: com.google.android:android:4.2.2" level="project" />
+    <orderEntry type="library" name="Maven: com.nineoldandroids:library:2.4.0" level="project" />
+    <orderEntry type="module" module-name="support-v4-animator" />
+    <orderEntry type="module" module-name="~apklib-com.actionbarsherlock_actionbarsherlock_4.3.1" />
+  </component>
+</module>
+
