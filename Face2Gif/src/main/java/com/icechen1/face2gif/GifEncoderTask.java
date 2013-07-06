@@ -1,19 +1,14 @@
 package com.icechen1.face2gif;
 
-import android.app.Activity;
 import android.content.Context;
 import android.graphics.*;
 import android.os.AsyncTask;
 import android.os.Environment;
-import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.hardware.Camera;
 import com.icechen1.face2gif.encoder.AnimatedGifEncoder;
 
-import java.io.ByteArrayOutputStream;
 import java.io.File;
-import java.io.FileOutputStream;
-import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -22,13 +17,15 @@ import java.util.Date;
  */
 public class GifEncoderTask extends AsyncTask<ArrayList<Bitmap>, Integer, String> {
 
-    private final ViewFragment frag;
+    private final RenderFragment frag;
     private int fps;
     private String TAG = "Face2Gif";
     private int height;
     private int width;
     private Context cxt;
-    GifEncoderTask(int _fps, Camera.Size s,ViewFragment parentFragment){
+    private String outputFileName;
+
+    GifEncoderTask(int _fps, Camera.Size s,RenderFragment parentFragment){
         fps = _fps;
         height = s.height;
         width = s.width;
@@ -40,7 +37,12 @@ public class GifEncoderTask extends AsyncTask<ArrayList<Bitmap>, Integer, String
     @Override
     protected void onPreExecute(){
         super.onPreExecute();
+        File directory = new File(Environment.getExternalStoragePublicDirectory(
+                Environment.DIRECTORY_PICTURES), "Face2Gif");
+        directory.mkdirs();
 
+        outputFileName = directory.getAbsolutePath() + "/Face2Gif_" + new Date().getTime() + ".gif";
+        frag.showPath(outputFileName);
     }
 
     protected String doInBackground(ArrayList<Bitmap>... data) {
@@ -49,14 +51,7 @@ public class GifEncoderTask extends AsyncTask<ArrayList<Bitmap>, Integer, String
             Log.d(TAG, "Cannot Write to external storage!");
             return null;
         }
-
-        File directory = new File(Environment.getExternalStoragePublicDirectory(
-                Environment.DIRECTORY_PICTURES), "Face2Gif");
-        directory.mkdirs();
-
         AnimatedGifEncoder e = new AnimatedGifEncoder();
-        String outputFileName = directory.getAbsolutePath() + "/Face2Gif_" + new Date().getTime() + ".gif";
-
         e.start(outputFileName);
         e.setDelay(1000/fps);
 
@@ -68,6 +63,17 @@ public class GifEncoderTask extends AsyncTask<ArrayList<Bitmap>, Integer, String
 
         int i = 0;
         for (Bitmap image: data[0]) {
+            // Escape early if cancel() is called
+            if (isCancelled()){
+                //Deletes this file
+                try{
+                    new File(outputFileName).delete();
+                }catch(Exception exp){
+                    //I/O Error?
+                }
+
+                break;
+            }
             /*
                 From stackoverflow.com/questions/9192982/displaying-yuv-image-in-android
 
@@ -84,8 +90,6 @@ public class GifEncoderTask extends AsyncTask<ArrayList<Bitmap>, Integer, String
 
             publishProgress((int) ((double)i/data[0].size() * 100));
             i++;
-            // Escape early if cancel() is called
-            if (isCancelled()) break;
         }
         e.finish();
         //Log.d(TAG, "Progress: " + outputFileName);

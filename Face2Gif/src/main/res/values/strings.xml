@@ -4,6 +4,41 @@
     <string name="app_name">Face2Gif</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
-    <string name="upload">Upload</string><string name="share">Share</string><string name="settings">Settings</string><string name="fps">FPS</string><string name="quality">Quality</string><string name="repeat">Repeat</string><string name="vignette">Vignette</string><string name="caption">Caption</string><string name="front_camera">Front Camera</string>
+    <string name="upload">Upload</string>
+    <string name="share">Share</string>
+    <string name="settings">Settings</string>
+    <string name="fps">FPS</string>
+    <string name="quality">Quality</string>
+    <string name="repeat">Repeat</string>
+    <string name="vignette">Vignette</string>
+    <string name="caption">Caption</string>
+    <string name="front_camera">Front Camera</string>
+    <string name="title_activity_gallery">Gallery</string>
+    <string name="title_activity_view">Face2Gif</string><string name="cancel">Cancel</string>
+    <array name="loading_messages">
+        <item>Reticulating 3-Dimensional Splines</item>
+        <item>Blurring Reality Lines</item>
+        <item>Manipulating Modal Memory</item>
+        <item>Initializing Secret Monads</item>
+        <item>Contacting the NSA</item>
+        <item>Loading Loading Algorithm</item>
+        <item>Analyzing Axe Trajectories</item>
+        <item>Readying Relaxation Receptors</item>
+        <item>Calculating Mandelbrots</item>
+        <item>Reticulating More Splines</item>
+        <item>Calculating Money Supply</item>
+        <item>Overflowing Stacks</item>
+        <item>Overflowing Heaps</item>
+        <item>Adjusting Reaction Factor</item>
+        <item>Simulating Program Execution</item>
+        <item>Fabricating Imaginary Infrastructure</item>
+        <item>Simulating Program Crash</item>
+        <item>Reverting Progress</item>
+        <item>Performing Rocket Science</item>
+        <item>Gaining Sentience</item>
+        <item>Morphing into iPhone</item>
+        <item>Writing Paradoxes</item>
+        <item>Loading</item>
+    </array>
 
 </resources>

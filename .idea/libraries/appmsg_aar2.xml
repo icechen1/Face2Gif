@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="appmsg.aar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Face2Gif/build/exploded-bundles/appmsg.aar/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

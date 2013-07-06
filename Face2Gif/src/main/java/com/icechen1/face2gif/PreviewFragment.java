@@ -5,11 +5,9 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
-import android.graphics.ImageFormat;
 import android.graphics.drawable.Drawable;
 import android.hardware.Camera;
 import android.media.MediaActionSound;
-import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -69,8 +67,8 @@ public class PreviewFragment extends Fragment {
 
 
     @Override
-    public void onPause() {
-        super.onPause();
+    public void onDestroyView() {
+        super.onDestroyView();
         releaseCamera();              // release the camera immediately on pause event
 
         previewRelativeLayout.removeAllViewsInLayout();
@@ -88,6 +86,13 @@ public class PreviewFragment extends Fragment {
                 //Show dialog
                 AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
                 builder.setMessage("Cannot connect to the camera.");
+                builder.setPositiveButton("Open Gallery", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                        getActivity().finish();
+                    }
+                });
                 builder.setNegativeButton("OK", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -100,8 +105,10 @@ public class PreviewFragment extends Fragment {
 
             }else{
                 mPreview = new CameraPreview(getActivity(), mCamera, CameraPreview.LayoutMode.FitToParent);
-
-                previewRelativeLayout.addView(mPreview);
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+                    mPreview.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LOW_PROFILE);
+                }
+            previewRelativeLayout.addView(mPreview);
             }
 
         }else{
@@ -128,11 +135,13 @@ public class PreviewFragment extends Fragment {
             int cameraCount = 0;
             Camera.CameraInfo cameraInfo = new Camera.CameraInfo();
             cameraCount = Camera.getNumberOfCameras();
+            Log.d("Face2Gif", "Camera count: " + cameraCount);
             for ( int camIdx = 0; camIdx < cameraCount; camIdx++ ) {
                 Camera.getCameraInfo( camIdx, cameraInfo );
                 if ( cameraInfo.facing == Camera.CameraInfo.CAMERA_FACING_FRONT  ) {
                     try {
                         cam = Camera.open( camIdx );
+                        Log.d("Face2Gif", "Camera opened: " + camIdx);
                     } catch (RuntimeException e) {
                         //No front camera
                         Log.e("Face2Gif", "Camera failed to open: " + e.getLocalizedMessage() + "\n");
@@ -145,6 +154,7 @@ public class PreviewFragment extends Fragment {
             /* Camera is not available (in use or does not exist)
              * Show dialog
              */
+            Log.e("Face2Gif", "Camera failed to open");
         }
         return cam; // returns null if camera is unavailable
     }
@@ -177,10 +187,10 @@ public class PreviewFragment extends Fragment {
             }
 
             //Show the result fragment
-            Fragment viewFragment = new ViewFragment(rec.retrieveData(), rec.getSize());
+            Fragment viewFragment = new RenderFragment(rec.retrieveData(), rec.getSize());
             getActivity().getSupportFragmentManager()
                     .beginTransaction()
-                    .replace(R.id.container,viewFragment,"frag_view")
+                    .replace(R.id.container,viewFragment,"frag_render")
                     .addToBackStack(null)
                     .commit();
         }else{

@@ -98,12 +98,7 @@ public class Recorder implements Camera.PreviewCallback{
 
             //Rotate it to the right orientation + Resize it to be half the original size
             // others devices
-            int orientation;
-            if(height < width){
-                orientation = 90;
-            } else {
-                orientation = 0;
-            }
+            int orientation = MainActivity.camera_angle;
 
             if (orientation != 0) {
                 Matrix matrix = new Matrix();

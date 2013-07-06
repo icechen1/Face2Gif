@@ -68,6 +68,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="android-support-v4" level="project" />
     <orderEntry type="module" module-name="appmsg" />
+    <orderEntry type="library" name="appmsg.aar" level="project" />
   </component>
 </module>
 

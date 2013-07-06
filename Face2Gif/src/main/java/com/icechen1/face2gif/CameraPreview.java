@@ -305,6 +305,7 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
                     break;
             }
             Log.v(LOG_TAG, "angle: " + angle);
+            MainActivity.camera_angle=angle;
             mCamera.setDisplayOrientation(angle);
         }
 

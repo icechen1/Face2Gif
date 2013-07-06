@@ -1,5 +1,6 @@
 package com.icechen1.face2gif;
 
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
@@ -15,16 +16,21 @@ import android.view.Window;
  * -Rotation
  * -Intent
  * -Gallery
+ * -Move strings to xml
  */
 public class MainActivity extends FragmentActivity {
 
 
+    public static int camera_angle = 0;
     private PreviewFragment previewFragment;
 
     @Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+        //No actionbar
         requestWindowFeature(Window.FEATURE_NO_TITLE);
+        //Prevent auto-rotation
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_NOSENSOR);
 		setContentView(R.layout.activity_main);
 
         previewFragment = new PreviewFragment();
@@ -56,6 +62,14 @@ public class MainActivity extends FragmentActivity {
         FragmentManager fm = getSupportFragmentManager();
         OptionFragment OptionFragment = new OptionFragment();
         OptionFragment.show(fm, "fragment_options");
+    }
+
+    public void cancelRender(View v){
+        try{
+            ((RenderFragment)getSupportFragmentManager().findFragmentByTag("frag_render")).cancel();
+        }catch(Exception e){
+
+        }
     }
 
 

@@ -6,16 +6,6 @@
         <option name="GRADLE_PROJECT_PATH" value=":" />
       </configuration>
     </facet>
-    <facet type="android" name="Android">
-      <configuration>
-        <option name="SELECTED_BUILD_VARIANT" value="debug" />
-        <option name="ASSEMBLE_TASK_NAME" value="bundleDebug" />
-        <option name="ASSEMBLE_TEST_TASK_NAME" value="assembleTest" />
-        <option name="ALLOW_USER_CONFIGURATION" value="false" />
-        <option name="ASSETS_FOLDER_RELATIVE_PATH" value="/src/main/assets" />
-        <option name="LIBRARY_PROJECT" value="true" />
-      </configuration>
-    </facet>
   </component>
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
@@ -25,36 +15,36 @@
     </content>
     <content url="file://$MODULE_DIR$/appmsg">
       <sourceFolder url="file://$MODULE_DIR$/appmsg/build/source/r/debug" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/appmsg/src/main/rs" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/appmsg/build/res/rs/debug" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/appmsg/src/debug/res" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/appmsg/src/main/aidl" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/appmsg/build/source/aidl/debug" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/appmsg/src/main/assets" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/appmsg/src/debug/assets" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/appmsg/src/debug/aidl" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/appmsg/src/main/jni" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/appmsg/res" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/appmsg/src/main/resources" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/appmsg/src/debug/resources" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/appmsg/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/appmsg/src/debug/rs" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/appmsg/build/source/rs/debug" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/appmsg/src/debug/java" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/appmsg/src/debug/jni" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/appmsg/build/source/buildConfig/debug" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/appmsg/src/instrumentTest/assets" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/appmsg/build/res/rs/test" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/appmsg/src/instrumentTest/resources" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/appmsg/src/instrumentTest/jni" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/appmsg/src/instrumentTest/rs" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/appmsg/build/res/rs/debug" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/appmsg/build/source/r/test" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/appmsg/build/source/aidl/test" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/appmsg/build/source/rs/test" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/appmsg/build/source/buildConfig/test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/appmsg/build/res/rs/test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/appmsg/src/debug/aidl" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/appmsg/src/debug/assets" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/appmsg/src/debug/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/appmsg/src/debug/jni" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/appmsg/src/debug/rs" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/appmsg/src/debug/res" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/appmsg/src/debug/resources" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/appmsg/src/main/aidl" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/appmsg/src/main/assets" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/appmsg/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/appmsg/src/main/jni" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/appmsg/src/main/rs" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/appmsg/res" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/appmsg/src/main/resources" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/appmsg/src/instrumentTest/aidl" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/appmsg/src/instrumentTest/res" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/appmsg/build/source/r/test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/appmsg/src/instrumentTest/assets" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/appmsg/src/instrumentTest/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/appmsg/src/instrumentTest/jni" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/appmsg/src/instrumentTest/rs" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/appmsg/src/instrumentTest/res" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/appmsg/src/instrumentTest/resources" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/appmsg/build/apk" />
       <excludeFolder url="file://$MODULE_DIR$/appmsg/build/assets" />
       <excludeFolder url="file://$MODULE_DIR$/appmsg/build/bundles" />
