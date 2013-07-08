@@ -1,2 +1,4 @@
 include ':Face2Gif'
-include ':appmsg'
+include ':libraries:appmsg'
+include ':libraries:QuiltViewLibrary'
+include ':libraries:gridlayout'

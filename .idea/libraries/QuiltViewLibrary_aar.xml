@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="QuiltViewLibrary.aar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Face2Gif/build/exploded-bundles/QuiltViewLibrary.aar/classes.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Face2Gif/build/exploded-bundles/QuiltViewLibrary.aar/classes.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Face2Gif/build/exploded-bundles/QuiltViewLibrary.aar/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

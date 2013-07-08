@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="gridlayout.aar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Face2Gif/build/exploded-bundles/gridlayout.aar/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

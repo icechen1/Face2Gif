@@ -1,45 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
               android:orientation="vertical"
               android:layout_width="match_parent"
-              android:layout_height="match_parent">
+              android:layout_height="match_parent"
+              android:id="@+id/scrollView"
+              android:background="@null">
 
-    <TextView
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/settings"
-        android:id="@+id/textView2"
-        android:layout_gravity="left|center_vertical"/>
-
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:minWidth="1000dp"
+        android:minHeight="1000dp"
+        android:background="@null">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/optionAdViewContainer"
+            android:background="@drawable/background_card"
+            android:layout_margin="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+        </LinearLayout>
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        >
+        android:background="@drawable/background_card"
+        android:layout_margin="20dp"
+        android:paddingTop="30dp"
+        android:paddingBottom="30dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|top"
+            android:gravity="center_horizontal">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/minusFps"
+                android:background="@drawable/background_card_button"
+                android:src="@drawable/ic_action_down_arrow"
+                android:layout_gravity="center"
+
+                android:layout_marginRight="20dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="10"
+                android:id="@+id/fps_TextView"
+                style="@style/CondensedTitle"
+                android:textColor="#FFBB33"
+                android:layout_gravity="center_horizontal|top"
+                />
+
+            <ImageButton
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:background="@drawable/background_card_button"
+                android:src="@drawable/ic_action_up_arrow"
+                android:id="@+id/addFps"
+                android:layout_marginLeft="20dp"/>
+        </LinearLayout>
 
         <TextView
+            style="@style/CondensedTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="@string/fps"
-            android:id="@+id/textView"
-            android:layout_gravity="center_horizontal|top"/>
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:ems="10"
-            android:id="@+id/editText"
-            android:imeOptions="actionDone"
-            android:layout_gravity="center_horizontal|top"/>
+            android:id="@+id/textView2"
+            android:textColor="#CC0000"
+            android:layout_gravity="center"/>
 
     </LinearLayout>
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        >
+        android:background="@drawable/background_card"
+        android:layout_margin="20dp"
+        android:paddingTop="30dp"
+        android:paddingBottom="30dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/quality"
+            android:id="@+id/qualityTextView"
+            style="@style/CondensedTitle"
+            android:textColor="#33B5E5"
+            android:gravity="center_horizontal"/>
+
+        <SeekBar
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/qualitySeekBar"
+            android:max="100"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -47,94 +117,69 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="@string/quality"
             android:id="@+id/textView"
-            android:layout_gravity="center_horizontal|top"/>
-
-        <SeekBar
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-            android:id="@+id/seekBar"/>
+            style="@style/CondensedTitle"
+            android:textColor="#0099CC"
+            android:layout_gravity="center"/>
 
     </LinearLayout>
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        >
+        android:background="@drawable/background_card"
+        android:layout_margin="20dp"
+        android:paddingTop="30dp"
+        android:paddingBottom="30dp"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
 
-        <TextView
+        <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="@string/repeat"
-            android:id="@+id/textView"
-            android:layout_gravity="center_horizontal|top"/>
-
-        <Switch
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-            android:text=""
-            android:id="@+id/switch1"/>
+            android:id="@+id/repeatCheckBox"
+            style="@style/CondensedTitle"
+            android:layout_gravity="center"
+            android:focusable="true"/>
 
     </LinearLayout>
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/background_card"
+        android:layout_margin="20dp"
+        android:paddingTop="30dp"
+        android:paddingBottom="30dp"
+        android:gravity="center_horizontal"
         >
 
-        <TextView
+        <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="@string/vignette"
-            android:id="@+id/textView"
-            android:layout_gravity="center_horizontal|top"/>
-
-        <Switch
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-            android:text=""
-            android:id="@+id/switch2"/>
+            android:id="@+id/vignetteCheckBox"
+            style="@style/CondensedTitle"
+            android:layout_gravity="center"/>
 
     </LinearLayout>
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/background_card"
+        android:layout_margin="20dp"
+        android:paddingTop="30dp"
+        android:paddingBottom="30dp"
+        android:gravity="center_horizontal"
         >
-
-        <TextView
+        <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="@string/caption"
-            android:id="@+id/textView"
-            android:layout_gravity="center_horizontal|top"/>
-
-        <Switch
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-            android:text=""
-            android:id="@+id/switch2"/>
+            android:id="@+id/captionCheckBox"
+            style="@style/CondensedTitle"
+            android:layout_gravity="center"/>
 
     </LinearLayout>
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        >
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="@string/front_camera"
-            android:id="@+id/textView"
-            android:layout_gravity="center_horizontal|top"/>
-
-        <Switch
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-            android:text=""
-            android:id="@+id/switch2"/>
-
     </LinearLayout>
 
 
-</LinearLayout>
+</ScrollView>

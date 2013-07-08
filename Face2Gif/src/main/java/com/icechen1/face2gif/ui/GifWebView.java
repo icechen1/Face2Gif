@@ -1,10 +1,8 @@
 package com.icechen1.face2gif.ui;
 
 import android.content.Context;
-import android.graphics.Color;
 import android.util.Log;
 import android.webkit.WebView;
-import com.icechen1.face2gif.R;
 
 import java.io.File;
 

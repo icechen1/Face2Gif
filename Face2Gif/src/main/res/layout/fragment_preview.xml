@@ -28,7 +28,8 @@
             android:layout_margin="15dp"
             android:padding="5dp"
             android:background="#33333366"
-            android:gravity="center_vertical">
+            android:gravity="center_vertical"
+            android:id="@+id/linearLayout">
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -49,23 +50,27 @@
 
         </LinearLayout>
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_alignParentLeft="true"
-            android:gravity="center|center_horizontal"
+            android:gravity="center_horizontal"
             android:background="@drawable/overlaybar"
-            android:paddingTop="5dp">
+            android:paddingTop="2dp"
+            android:id="@+id/relativeLayoutOverlay">
             <ImageButton
                 android:id="@+id/gallery"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_action_gallery"
                 android:padding="10dp"
-                android:layout_marginRight="20dp"
+                android:onClick="gallery"
                 android:background="@drawable/background_card_button"
-                android:layout_gravity="center_vertical"/>
+                android:layout_gravity="center_vertical"
+                android:layout_alignBottom="@+id/toggle"
+                android:layout_toLeftOf="@+id/toggle"
+                android:layout_marginRight="20dp"/>
 
             <ImageButton
                 android:id="@+id/toggle"
@@ -75,7 +80,11 @@
                 android:src="@drawable/shape_circle_big"
                 android:padding="15dp"
                 android:background="@drawable/background_card_button"
-                android:layout_gravity="center_vertical"/>
+                android:layout_gravity="center_vertical"
+                android:contentDescription="Record toggle"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="0dp"/>
             <ImageButton
                 android:id="@+id/settings"
                 android:layout_width="wrap_content"
@@ -83,10 +92,45 @@
                 android:onClick="openSettings"
                 android:src="@drawable/ic_action_config"
                 android:padding="10dp"
-                android:layout_marginLeft="20dp"
                 android:background="@drawable/background_card_button"
-                android:layout_gravity="center_vertical"/>
-        </LinearLayout>
+                android:layout_alignBottom="@+id/toggle"
+                android:layout_toRightOf="@+id/toggle"
+                android:layout_marginLeft="20dp"/>
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="flipCamera"
+                android:src="@drawable/ic_action_flip"
+                android:padding="10dp"
+                android:background="@drawable/background_card_button"
+                android:layout_alignBottom="@+id/toggle"
+                android:visibility="gone"
+                android:layout_toRightOf="@+id/settings"/>
+
+        </RelativeLayout>
+
+        <com.icechen1.face2gif.ui.OutlineEditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editTextTop"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="30dp"
+            android:hint="@string/optional_caption_top"
+            android:textSize="36dp"/>
+
+        <com.icechen1.face2gif.ui.OutlineEditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editTextBottom"
+            android:layout_margin="30dp"
+            android:hint="@string/optional_caption_bottom"
+            android:textSize="36dp"
+            android:layout_above="@+id/relativeLayoutOverlay"
+            android:layout_centerHorizontal="true"/>
+
     </RelativeLayout>
 
 

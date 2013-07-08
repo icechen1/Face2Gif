@@ -1,7 +1,7 @@
 package com.icechen1.face2gif.encoder;
 
-import java.io.OutputStream;
 import java.io.IOException;
+import java.io.OutputStream;
 
 //==============================================================================
 //  Adapted from Jef Poskanzer's Java port by way of J. M. G. Elliott.

@@ -1,11 +1,11 @@
 package com.icechen1.face2gif.encoder;
 
+import android.graphics.Bitmap;
+
 import java.io.BufferedOutputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
-
-import android.graphics.Bitmap;
 
 
 /**

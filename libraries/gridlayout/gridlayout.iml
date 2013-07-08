@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module external.system.id="GRADLE" type="JAVA_MODULE" version="4">
+<module type="JAVA_MODULE" version="4">
   <component name="FacetManager">
     <facet type="android" name="Android">
       <configuration>
         <option name="SELECTED_BUILD_VARIANT" value="debug" />
-        <option name="ASSEMBLE_TASK_NAME" value="assembleDebug" />
+        <option name="ASSEMBLE_TASK_NAME" value="bundleDebug" />
         <option name="ASSEMBLE_TEST_TASK_NAME" value="assembleTest" />
         <option name="ALLOW_USER_CONFIGURATION" value="false" />
-        <option name="MANIFEST_FILE_RELATIVE_PATH" value="/src/main/AndroidManifest.xml" />
-        <option name="RES_FOLDER_RELATIVE_PATH" value="/src/main/res" />
         <option name="ASSETS_FOLDER_RELATIVE_PATH" value="/src/main/assets" />
+        <option name="LIBRARY_PROJECT" value="true" />
       </configuration>
     </facet>
     <facet type="android-gradle" name="Android-Gradle">
       <configuration>
-        <option name="GRADLE_PROJECT_PATH" value=":Face2Gif" />
+        <option name="GRADLE_PROJECT_PATH" value=":libraries:gridlayout" />
       </configuration>
     </facet>
   </component>
@@ -40,10 +39,10 @@
       <sourceFolder url="file://$MODULE_DIR$/src/debug/resources" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/aidl" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/assets" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/jni" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/rs" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/main/res" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/res" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/resources" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/instrumentTest/aidl" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/instrumentTest/assets" isTestSource="true" />
@@ -66,10 +65,7 @@
     </content>
     <orderEntry type="jdk" jdkName="Android 4.2.2" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="android-support-v4" level="project" />
-    <orderEntry type="library" name="appmsg.aar" level="project" />
-    <orderEntry type="library" name="QuiltViewLibrary.aar" level="project" />
-    <orderEntry type="library" name="GoogleAdMobAdsSdk-641" level="project" />
+    <orderEntry type="library" name="android-support-v7-gridlayout" level="project" />
   </component>
 </module>
 

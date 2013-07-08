@@ -1,0 +1,18 @@
+<component name="libraryTable">
+  <library name="android-support-v7-gridlayout">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libraries/QuiltViewLibrary/libs/android-support-v7-gridlayout.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Face2Gif/build/exploded-bundles/QuiltViewLibrary.aar/libs/android-support-v7-gridlayout.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Face2Gif/libs/android-support-v7-gridlayout.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Face2Gif/libs/android-support-v7-gridlayout.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Face2Gif/libs/android-support-v7-gridlayout.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libraries/gridlayout/libs/android-support-v7-gridlayout.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libraries/QuiltViewLibrary/build/exploded-bundles/gridlayout.aar/libs/android-support-v7-gridlayout.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Face2Gif/build/exploded-bundles/gridlayout.aar/libs/android-support-v7-gridlayout.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libraries/QuiltViewLibrary/build/exploded-bundles/gridlayout.aar/libs/android-support-v7-gridlayout.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Face2Gif/build/exploded-bundles/gridlayout.aar/libs/android-support-v7-gridlayout.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

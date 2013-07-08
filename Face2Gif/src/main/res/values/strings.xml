@@ -14,7 +14,14 @@
     <string name="caption">Caption</string>
     <string name="front_camera">Front Camera</string>
     <string name="title_activity_gallery">Gallery</string>
-    <string name="title_activity_view">Face2Gif</string><string name="cancel">Cancel</string>
+    <string name="title_activity_view">Face2Gif</string>
+    <string name="action_share">Share</string>
+    <string name="cancel">Cancel</string>
+    <string name="action_delete">Delete</string>
+    <string name="optional_caption_top">Optional</string>
+    <string name="optional_caption_bottom">Caption</string>
+    <string name="delete_confirmation">Delete image?</string>
+    <string name="no_pics_gallery">Rats! No pictures found :(</string>
     <array name="loading_messages">
         <item>Reticulating 3-Dimensional Splines</item>
         <item>Blurring Reality Lines</item>
@@ -36,6 +43,7 @@
         <item>Reverting Progress</item>
         <item>Performing Rocket Science</item>
         <item>Gaining Sentience</item>
+        <item>Creating Utopia</item>
         <item>Morphing into iPhone</item>
         <item>Writing Paradoxes</item>
         <item>Loading</item>

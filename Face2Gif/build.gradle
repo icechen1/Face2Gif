@@ -9,8 +9,10 @@ buildscript {
 apply plugin: 'android'
 
 dependencies {
+    compile project (':libraries:appmsg')
+    compile project (':libraries:QuiltViewLibrary')
     compile files('libs/android-support-v4.jar')
-    compile project (':appmsg')
+    compile files('libs/GoogleAdMobAdsSdk-641.jar')
 }
 
 android {

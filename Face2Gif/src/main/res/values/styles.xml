@@ -17,12 +17,11 @@
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
 
-    <style name="RobotoFont">
-
+    <style name="CondensedFont">
+        <item name="android:fontFamily">sans-serif-condensed</item>
     </style>
-    <style name="RobotoFontTitle" parent="RobotoFont">
-
+    <style name="CondensedTitle" parent="CondensedFont">
+        <item name="android:textSize">26sp</item>
     </style>
-
 
 </resources>
