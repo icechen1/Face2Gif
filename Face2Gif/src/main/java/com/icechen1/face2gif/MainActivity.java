@@ -104,7 +104,7 @@ public class MainActivity extends FragmentActivity implements OptionFragment.Opt
         try{
             PreviewFragment frag = ((PreviewFragment) getSupportFragmentManager().findFragmentByTag("frag_rec"));
             if (frag.isRecording){
-                frag.cancelRecordig();
+                frag.cancelRecording();
                 return;
             }
 

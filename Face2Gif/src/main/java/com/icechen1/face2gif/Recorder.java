@@ -2,6 +2,7 @@ package com.icechen1.face2gif;
 
 import android.graphics.*;
 import android.hardware.Camera;
+import android.util.Log;
 
 import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
@@ -61,19 +62,28 @@ public class Recorder implements Camera.PreviewCallback{
 
     public void takePicture(){
        // mCamera.autoFocus(null);
-        mCamera.setPreviewCallbackWithBuffer(this);
+        //int preview_size = mCamera.getParameters().getPreviewSize().width *
+        //        mCamera.getParameters().getPreviewSize().height;
+       // int bitsPerPixel = ImageFormat.getBitsPerPixel(mCamera.getParameters().getPreviewFormat());
+
+       // mCamera.addCallbackBuffer(new byte[preview_size*bitsPerPixel]);
+
+        mCamera.setPreviewCallback(this);
     }
 
     public void start(){
         if(!isRecording){
             takePicture();
+            Log.d("Face2Gif", "Recording");
+
             isRecording = true;
         }
     }
 
     public void stop(){
         isRecording = false;
-        mCamera.setPreviewCallbackWithBuffer(null);
+        mCamera.setPreviewCallback(null);
+        Log.d("Face2Gif", "Stop recording");
     }
 
     public ArrayList<Bitmap> retrieveData(){
