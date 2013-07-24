@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Face2Gif/Face2Gif.iml" filepath="$PROJECT_DIR$/Face2Gif/Face2Gif.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Face2GifProject.iml" filepath="$PROJECT_DIR$/Face2GifProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libraries/QuiltViewLibrary/QuiltViewLibrary.iml" filepath="$PROJECT_DIR$/libraries/QuiltViewLibrary/QuiltViewLibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libraries/appmsg/appmsg.iml" filepath="$PROJECT_DIR$/libraries/appmsg/appmsg.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libraries/gridlayout/gridlayout.iml" filepath="$PROJECT_DIR$/libraries/gridlayout/gridlayout.iml" />
+    </modules>
+  </component>
+</project>
+

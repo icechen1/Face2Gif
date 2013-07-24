@@ -134,4 +134,20 @@ public class AppPreferenceManager {
     public void saveHintSeen(){
         edit.putBoolean("hint_seen", true).commit();
     }
+
+
+    /**
+     * Fetches caption preference
+     * @return boolean: caption
+     */
+    public boolean getCameraFront(){
+        return settings.getBoolean("camera_front_side", true);
+    }
+
+    /**
+     * Saves the camera side preference
+     */
+    public void saveCameraFront(boolean front){
+        edit.putBoolean("camera_front_side", front).commit();
+    }
 }

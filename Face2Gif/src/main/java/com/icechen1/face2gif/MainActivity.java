@@ -13,6 +13,7 @@ import com.icechen1.face2gif.fragments.OptionFragment;
 import com.icechen1.face2gif.fragments.PreviewFragment;
 import com.icechen1.face2gif.fragments.RenderFragment;
 import com.icechen1.face2gif.gallery.GalleryActivity;
+import com.icechen1.face2gif.ui.AppRater;
 
 /**
  * TODO
@@ -24,6 +25,10 @@ import com.icechen1.face2gif.gallery.GalleryActivity;
  * -Move strings to xml
  * -Grid style options OK
  * -Delete pic
+ * -change hue and stuff every frame for a psychdelic effect
+ * -back camera
+ * -add caption after taking the video
+ * -maybe declare camera as static
  */
 public class MainActivity extends FragmentActivity implements OptionFragment.OptionListener{
 
@@ -46,6 +51,8 @@ public class MainActivity extends FragmentActivity implements OptionFragment.Opt
                 .beginTransaction()
                 .add(R.id.container, previewFragment, "frag_rec")
                 .commit();
+        AppRater.app_launched(this);
+       // AppRater.showRateDialog(this, null);
 	}
 
 	@Override
@@ -64,6 +71,16 @@ public class MainActivity extends FragmentActivity implements OptionFragment.Opt
             Log.e("Face2Gif", e.getMessage());
         }
 	}
+
+    public void flipCamera(View v){
+        previewFragment.flipCamera(v);
+        try{
+
+        }catch(Exception e){
+            //Fragment not active
+            Log.e("Face2Gif", e.getMessage());
+        }
+    }
 
     //Open the settings DialogFragment
     public void openSettings(View v){
@@ -111,7 +128,7 @@ public class MainActivity extends FragmentActivity implements OptionFragment.Opt
         }catch(Exception e){
 
         }
-        super.onBackPressed();
+       super.onBackPressed();
     }
 
 

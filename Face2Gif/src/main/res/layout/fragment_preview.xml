@@ -3,7 +3,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 tools:context=".MainActivity"
-                android:background="@color/background_window">
+                android:background="#000000"
+                android:gravity="center_horizontal">
 
     <RelativeLayout
         android:id="@+id/camera_preview"
@@ -19,6 +20,19 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         >
+
+        <ImageButton
+            android:id="@+id/flipCamera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="flipCamera"
+            android:src="@drawable/ic_action_flip"
+            android:padding="10dp"
+            android:background="@drawable/background_card_button"
+            android:layout_above="@+id/relativeLayoutOverlay"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -96,18 +110,6 @@
                 android:layout_alignBottom="@+id/toggle"
                 android:layout_toRightOf="@+id/toggle"
                 android:layout_marginLeft="20dp"/>
-
-            <ImageButton
-                android:id="@+id/imageButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="flipCamera"
-                android:src="@drawable/ic_action_flip"
-                android:padding="10dp"
-                android:background="@drawable/background_card_button"
-                android:layout_alignBottom="@+id/toggle"
-                android:visibility="gone"
-                android:layout_toRightOf="@+id/settings"/>
 
         </RelativeLayout>
 

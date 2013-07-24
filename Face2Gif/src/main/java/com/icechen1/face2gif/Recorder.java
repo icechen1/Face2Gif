@@ -18,7 +18,7 @@ public class Recorder implements Camera.PreviewCallback{
     private final int orientation;
     private boolean YUY2_isSupported = false;
     private boolean isRecording = false;
-    private Camera mCamera;
+    private static Camera mCamera;
     private String TAG = "Face2Gif";
     private ArrayList<Bitmap> picData;
     private int delay;
@@ -82,7 +82,12 @@ public class Recorder implements Camera.PreviewCallback{
 
     public void stop(){
         isRecording = false;
-        mCamera.setPreviewCallback(null);
+        try{
+            mCamera.setPreviewCallback(null);
+        }catch(RuntimeException e){
+            //carry on
+        }
+
         Log.d("Face2Gif", "Stop recording");
     }
 
